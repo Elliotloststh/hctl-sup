@@ -22,6 +22,8 @@ var runtimeExecCommand = cli.Command{
 	Name:                   "exec",
 	Usage:                  "Run a command in a running container",
 	ArgsUsage:              "CONTAINER-ID COMMAND [ARG...]",
+	Flags: []cli.Flag{
+	},
 
 	Action: func(context *cli.Context) error {
 		if len(context.Args()) < 2 {
